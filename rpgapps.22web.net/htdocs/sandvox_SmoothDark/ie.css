@@ -1,0 +1,18 @@
+/* 
+   css Copyright (c) 2005-2006 by Karelia Software. All rights reserved.
+   css released under Creative Commons License 
+        - http://creativecommons.org/licenses/by-sa/2.5/ 
+   All associated graphics belong to their respective owners 
+        and are licensed separately. 
+*/
+
+#page-content {
+    margin-left: 20px !important;
+}
+
+
+
+body.no-sidebar .photogrid-index {
+	width: 660px!important;
+	margin-left:30px;
+}

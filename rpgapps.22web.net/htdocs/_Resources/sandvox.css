@@ -1,0 +1,19 @@
+
+/* IE7 hacks */
+
+*:first-child+html .gridItem img {
+	position:relative;
+	top:0px;
+}
+
+*:first-child+html .gridItem h3 {
+	position:relative;
+	top:0px;
+}
+
+/* Navigation arrows */
+div.text-navigation { text-align:center; margin-bottom:1em;}
+div.text-navigation div { display:inline; margin:0px 0.5em; }
+ 
+/* Firefox reduce dotted lines on links */
+.photo-navigation a:focus, .replaced a:focus {overflow:hidden;}

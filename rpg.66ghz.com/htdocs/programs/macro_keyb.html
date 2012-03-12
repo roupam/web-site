@@ -1,0 +1,780 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+
+  
+  
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+
+
+  
+  
+  <title>macro_keyb</title>
+</head>
+
+
+<body>
+
+
+<small><span style="font-family: AquaBase;"></span></small><small><span style="font-family: AquaBase;"><br>
+
+
+
+&nbsp;<br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">;;&nbsp;&nbsp;&nbsp;
+MACRO LIBRARY FOR KEYBOARD FACILITIES
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">;;&nbsp;&nbsp;&nbsp;
+DISPLAY CHARACTER
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">;;&nbsp;&nbsp;&nbsp;
+#1=CHARACTER CODE
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">DISPLAY&nbsp;&nbsp;&nbsp;
+MACRO
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; MOV&nbsp;&nbsp;&nbsp; AH,02H
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; MOV&nbsp;&nbsp;&nbsp; DL,#1
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; INT&nbsp;&nbsp;&nbsp; 21H
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; #EM
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">;;&nbsp;&nbsp;&nbsp;
+PRINT CHAIN OF CHARACTERS
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">;;&nbsp;&nbsp;&nbsp;
+#1=OFFSET OF MESSAGE
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">PRINT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+MACRO
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; MOV&nbsp;&nbsp;&nbsp;
+DX,OFFSET #1
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; MOV&nbsp;&nbsp;&nbsp; AH,09H
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; INT&nbsp;&nbsp;&nbsp; 21H
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; #EM
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">;;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+TO READ KEYB CHARACTER AND DISPLAY IT
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">READ&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; MACRO
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; MOV&nbsp;&nbsp;&nbsp; AH,01H
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; INT&nbsp;&nbsp;&nbsp; 21H
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; #EM
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">;;&nbsp;&nbsp;&nbsp;
+READ FROM FILE
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">;;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+#1=NO OF BYTES TO READ
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">READ_F&nbsp;&nbsp;&nbsp;
+MACRO
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+MOV&nbsp;&nbsp;&nbsp;&nbsp; CX,#1
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+MOV&nbsp;&nbsp;&nbsp;&nbsp; AH,3FH
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+INT&nbsp;&nbsp;&nbsp;&nbsp; 21H
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; #EM
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">;;&nbsp;&nbsp;&nbsp;
+WRITE_TO_FILE
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">;;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+#1=NO OF BYTES TO WRITE
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">WRITE_F&nbsp;&nbsp;&nbsp;
+MACRO
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; MOV&nbsp;&nbsp;&nbsp; CX,#1
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; MOV&nbsp;&nbsp;&nbsp; AH,40H
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; INT&nbsp;&nbsp;&nbsp; 21H
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; #EM
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">;;&nbsp;&nbsp;&nbsp;
+OPEN_FILE
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">;;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+#1=REQUEST CODE (00,01,02)
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">OPEN_F&nbsp;&nbsp;&nbsp;
+MACRO&nbsp;&nbsp;&nbsp; &nbsp;</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; MOV&nbsp;&nbsp;&nbsp; AH,3DH
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; MOV&nbsp;&nbsp;&nbsp; AL,#1
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+INT&nbsp;&nbsp; 21H
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; #EM
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">;;&nbsp;&nbsp;&nbsp;
+CLOSE_FILE
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">;;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">CLOSE_F&nbsp;&nbsp;&nbsp;
+MACRO
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+MOV&nbsp;&nbsp;&nbsp;&nbsp; AH,3EH
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; INT&nbsp;&nbsp;&nbsp; 21H
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; #EM
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">;;&nbsp;&nbsp;&nbsp;
+CREATE_FILE
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">;;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+NORMAL
+ATTRIBUTE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+#1=00H
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">CREATE_F&nbsp;&nbsp;&nbsp;
+MACRO
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; MOV&nbsp;&nbsp;&nbsp; AH,3CH
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; MOV&nbsp;&nbsp;&nbsp; CX,#1
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; INT&nbsp;&nbsp;&nbsp; 21H
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; #EM
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">;;&nbsp;&nbsp;&nbsp;
+MOVE FILE POINTER
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">;;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+#1=00(START)01(CURRENT)02(END)
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">FILE_PTR&nbsp;&nbsp;&nbsp;
+MACRO
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; MOV&nbsp;&nbsp;&nbsp; AL,#1
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; MOV&nbsp;&nbsp;&nbsp; AH,42H
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; INT&nbsp;&nbsp;&nbsp; 21H
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; #EM
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">;;;;;;;;;;;;;;;;;;;;;;;;;;;
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">;;;;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; #1=FILE_MASK
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">;;;;;;;;;;;;;;;;;;;;;;;;;;;
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">FIND_F&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+MACRO&nbsp;&nbsp; #1
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; MOV&nbsp;&nbsp;&nbsp; AH,4EH
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; MOV&nbsp;&nbsp;&nbsp; CX,00H
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; LEA&nbsp;&nbsp;&nbsp; DX,#1
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; INT&nbsp;&nbsp;&nbsp; 21H
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; ENDM
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">FIND_NEXT&nbsp;&nbsp;&nbsp;
+MACRO
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; MOV&nbsp;&nbsp;&nbsp; AH,4FH
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; INT&nbsp;&nbsp;&nbsp; 21H
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; ENDM
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">;;&nbsp;&nbsp;&nbsp;
+UNLINK FILE
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">;;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+#1=FILE ATTRIBUTES
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">UNLINK_F&nbsp;&nbsp;&nbsp;
+MACRO
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; MOV&nbsp;&nbsp;&nbsp; AH,41H
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0MOV&nbsp;&nbsp;&nbsp;&nbsp; CL,#1
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; INT&nbsp;&nbsp;&nbsp; 21H
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; #EM
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">;;&nbsp;&nbsp;&nbsp;
+EXIT&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+#1=ERROR CODE
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">EXIT&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; MACRO
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; MOV&nbsp;&nbsp;&nbsp; AH,4CH
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; MOV&nbsp;&nbsp;&nbsp; AL,#1
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; INT&nbsp;&nbsp;&nbsp; 21H
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; #EM
+</span><br style="font-family: Courier New,Courier,monospace;">
+
+
+
+<span style="font-family: Courier New,Courier,monospace;">&nbsp;</span><big><br>
+
+</big>
+
+</span></small><span style="font-family: AquaBase;"></span><small><span style="font-family: AquaBase;"></span></small>
+</body>
+</html>

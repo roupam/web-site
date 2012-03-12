@@ -1,0 +1,24 @@
+textarea.fullWidth, input.fullWidth, select.fullWidth {
+	width:98%;
+	margin:4px 0;
+}
+form.contactElement input.submit {
+	width:auto;
+	display:block;
+	margin-left:auto;
+	margin-right:2%;
+	min-width:50%;
+}
+form.contactElement th {
+	text-align:right;
+	font-weight:normal;
+	width:25%;
+}
+
+.contactError { color:red; font-weight:bold; }
+
+/* Contact Element For IE 7 */
+*:first-child+html form.contactElement input.submit {
+	padding:0px 10%;
+	min-width: 0px;
+}
